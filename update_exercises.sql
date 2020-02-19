@@ -1,0 +1,10 @@
+USE codeup_test_db;
+SELECT name AS 'All Album Names' FROM albums;
+SELECT name AS 'All Albums Released Before 1980' FROM albums WHERE release_date < '1980';
+SELECT name AS 'All Albums By Michael Jackson' FROM albums WHERE artist = 'Michael Jackson';
+UPDATE albums SET sales = sales * 10;
+SELECT sales AS 'Sales times 10' FROM albums;
+UPDATE albums SET release_date = '1880' WHERE release_date < '1980';
+SELECT release_date AS 'Release Dates From The Past' FROM albums WHERE release_date < '1980';
+UPDATE albums SET artist = 'Peter Jackson' WHERE artist = 'Michael Jackson';
+SELECT artist AS 'Changed Artist From Michael Jackson to Peter Jackson' FROM albums WHERE artist = 'Peter Jackson';
