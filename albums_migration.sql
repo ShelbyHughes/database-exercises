@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS albums (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     artist VARCHAR(255) NOT NULL,
     name  VARCHAR(255) NOT NULL,
-    release_date INT UNSIGNED NOT NULL,
-    sales DOUBLE NOT NULL,
+    release_date CHAR(4),
+    sales DECIMAL(4,1),
     genre VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
