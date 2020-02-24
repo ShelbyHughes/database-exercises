@@ -7,4 +7,4 @@ SELECT e.first_name AS 'first_name', e.last_name AS 'last_name' FROM employees e
 
 SELECT d.dept_name AS 'dept_name' FROM departments d, dept_manager dm, employees e WHERE e.emp_no = dm.emp_no AND dm.dept_no = d.dept_no AND e.gender = 'F' and dm.to_date = '9999-01-01' GROUP BY d.dept_name;
 
-SELECT e.first_name, e.last_name FROM employees e, salaries s WHERE salary IN ( SELECT DISTINCT MAX(salary) FROM salaries );
+SELECT e.first_name, e.last_name FROM employees AS e JOIN salaries AS s ON e.emp_no = s.emp_no WHERE salary = (SELECT MAX(salary) FROM salaries);
